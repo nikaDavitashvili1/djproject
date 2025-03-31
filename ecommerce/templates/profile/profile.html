@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Welcome, {{ usersprofile.user.username }}!</h2>
+    <p>Email: {{ usersprofile.user.email }}</p>
+    <p>Phone: {{ usersprofile.phone }}</p>
+    <p>Address: {{ usersprofile.address }}</p>
+
+    <a href="{% url 'edit_profile' %}" class="btn btn-warning">Edit my profile</a>
+</div>
+{% endblock %}
